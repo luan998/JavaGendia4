@@ -6,27 +6,21 @@ public class exercicio1 {
 
 	public static void main(String[] args) {
 		
-		int valor[]=new int[5];
-		int x,maior=0;
+		int valor[]={1,0,5,-2,-5,7};
+		int x,soma=0;
 		Scanner read = new Scanner(System.in);
+		soma = valor[0]+valor[1]+valor[5];
+		for(x=0;x<6;x++) {
+			if(x==3) {
+				valor[x]=100;
+			}
+		}
 		
-		for(x=0;x<5;x++) {
-			System.out.println("Entre com uma pontuação");
-			valor[x]=read.nextInt();
-			while(valor[x]<0) {//Não quero que possua valores negativos digitados
-				System.out.println("Entre com uma pontuação");
-				valor[x]=read.nextInt();
-			}
+		System.out.println("Os valores do vetor A são:");
+		for(x=0;x<6;x++) {
+			System.out.println(valor[x]);
 		}
-		for(x=0;x<5;x++) {
-			System.out.printf("\nO valor da pontuação foi %d",valor[x]);
-		}
-		for(x=0;x<5;x++) {
-			if(valor[x]>maior) {
-				maior=valor[x];
-			}
-		}
-		System.out.printf("\nE a maior pontuação digitada foi: %d",maior);
+		System.out.println("E o resultado da soma pedida é: "+soma);
 	}
 
 }
